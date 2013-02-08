@@ -1,19 +1,17 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes('xhtml'); ?>> <![endif]-->
-<!--[if IE 7]>	  <html class="no-js lt-ie9 lt-ie8" <?php language_attributes('xhtml'); ?>> <![endif]-->
-<!--[if IE 8]>	  <html class="no-js lt-ie9" <?php language_attributes('xhtml'); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes('xhtml'); ?>> <!--<![endif]-->
+<html class="no-js" <?php language_attributes('xhtml'); ?>>
 <head>
 	<meta charset="utf-8">
 	<title><?php davidwritescode_title(); ?></title>
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
 	<link rel="alternate" type="application/rss+xml" title="Subscribe to <?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Subscribe to <?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel="author" href="https://plus.google.com/113092115740208953129/posts" />
 
 	<script src="<?php echo get_bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.min.js"></script>
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
