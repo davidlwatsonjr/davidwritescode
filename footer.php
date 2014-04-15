@@ -1,27 +1,29 @@
+			</div>
+			<!-- .content-wrapper -->
 		</div>
-			<!-- .bodyContent -->
-		</div>
-		<!-- .mainCont -->
-		</div>
-		<div class="footer">
-			<div class="inner">
-				<span class="random-message"><?php echo davidwritescode_random_message(); ?></span>
+		<!-- .page-wrapper -->
+
+		<footer class="footer">
+			<div class="footer-content">
+				<a class="link-to-top" href="#top">Top</a>
+				<span class="random-message"><?php echo dwc_random_message(); ?></span>
 				<div class="right">
-					<?php /* wp_nav_menu( array('fallback_cb' => 'lcb_page_menu_flat', 'container' => false, 'depth' => '1', 'theme_location' => 'secondary', 'link_before' => '', 'link_after' => '') ); */ ?>
+					<?php wp_nav_menu([
+						'fallback_cb' => 'dwc_page_menu_flat',
+						'container' => false,
+						'depth' => '1',
+						'theme_location' => 'secondary',
+						'link_before' => '',
+						'link_after' => ''
+					]); ?>
 					<?php dynamic_sidebar('footer-widget-area'); ?>
-					<a href="#top">Top</a>
 				</div>
 			</div>
-		</div>
+		</footer>
 		<!-- .footer -->
 
 		<?php wp_footer(); ?>
-		<script>
-			var _gaq=[['_setAccount','UA-28395637-1'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script><?php /*
+<?php /*
 		<div id="fb-root"></div>
 		<script>
 			(function(d, s, id){
@@ -45,6 +47,8 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 			}());
 		</script>
-		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ff9369a70a5bb68"></script> */ ?>
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ff9369a70a5bb68"></script>
+
+*/ ?>
 	</body>
 </html>

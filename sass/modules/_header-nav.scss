@@ -1,0 +1,114 @@
+.header-nav {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    display: none;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+
+    @media screen and (min-width: 975px) {
+      display: block;
+    }
+  }
+
+  &:before {
+    @extend .dwc-topmenu-corner-left;
+    left: -10px;
+  }
+
+  &:after {
+    @extend .dwc-topmenu-corner-right;
+    right: -10px;
+  }
+
+  ul {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#177fe9), to(#0e5dab));
+    background: -webkit-linear-gradient(#177fe9 0%, #0e5dab 100%);
+    background: -moz-linear-gradient(#177fe9 0%, #0e5dab 100%);
+    background: -o-linear-gradient(#177fe9 0%, #0e5dab 100%);
+    background: linear-gradient(#177fe9 0%, #0e5dab 100%);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #fff;
+    @include box-shadow(0 1px 5px #575757);
+    font-size: 14px;
+    height: 37px;
+    line-height: 36px;
+    position: relative;
+
+    @media screen and (min-width: 975px) {
+      left: -9px;
+      padding: 0 9px;
+      width: 958px;
+    }
+
+    // /* Drop Down Menu */
+    ul {
+      background: #0e5daa;
+      display: none;
+      font-size: 13px;
+      height: auto;
+      left: 0;
+      line-height: 18px;
+      position: absolute;
+      top: 36px;
+      width: 200px;
+
+      ul {
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: #fff;
+      display: block;
+      height: 100%;
+      padding: 0 10px;
+    }
+
+    li {
+      display: block;
+
+      a {
+        padding: 4px 10px;
+
+        &:hover {
+          background: #1069c0;
+        }
+      }
+    }
+  }
+
+  li a:hover,
+  .current_page_item a,
+  .current_page_ancestor a,
+  .current-menu-item a,
+  .current-menu-ancestor a {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#3a92eb), to(#3275b7));
+    background: -webkit-linear-gradient(#3a92eb, #3275b7);
+    background: -moz-linear-gradient(#3a92eb, #3275b7);
+    background: -o-linear-gradient(#3a92eb, #3275b7);
+    background: linear-gradient(#3a92eb, #3275b7);
+  }
+
+  .home a {
+    padding: 0;
+    width: 50px;
+
+    strong {
+      background: url('images/home-icon.png') no-repeat 50% 50%;
+      cursor: pointer;
+      display: block;
+      height: 36px;
+      text-indent: -20000px;
+    }
+  }
+}

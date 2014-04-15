@@ -1,0 +1,113 @@
+.header {
+  position: relative;
+
+  .branding {
+    padding: 22px 28px;
+  }
+
+  h1 {
+    color: #11487d;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 44px;
+
+    @media screen and (max-width: 501px) {
+      font-size: 39px;
+      line-height: 43px;
+    }
+
+    @media screen and (max-width: 486px) {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    @media screen and (max-width: 478px) {
+      font-size: 37px;
+      line-height: 41px;
+    }
+
+    @media screen and (max-width: 470px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @media screen and (max-width: 458px) {
+      font-size: 35px;
+      line-height: 39px;
+    }
+
+    @media screen and (max-width: 446px) {
+      font-size: 34px;
+      line-height: 38px;
+    }
+
+    @media screen and (max-width: 435px) {
+      font-size: 33px;
+      line-height: 37px;
+    }
+
+    @media screen and (max-width: 422px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 31px;
+      line-height: 35px;
+    }
+
+    @media screen and (max-width: 401px) {
+      font-size: 30px;
+      line-height: 34px;
+    }
+
+    @media screen and (max-width: 395px) {
+      font-size: 29px;
+      line-height: 33px;
+    }
+
+    @media screen and (max-width: 382px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @media screen and (max-width: 371px) {
+      font-size: 27px;
+      line-height: 31px;
+    }
+
+    @media screen and (max-width: 362px) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    @media screen and (max-width: 338px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    a {
+      color: #11487d;
+    }
+  }
+
+  h2 {
+    color: #0f74d9;
+    font: 12px/16px Georgia, "Times New Roman", Times, serif;
+  }
+
+  .search-form {
+    @media screen and (min-width: 960px) {
+      position: absolute;
+      right: 30px;
+      top: 26px;
+      width: 327px;
+    }
+  }
+}

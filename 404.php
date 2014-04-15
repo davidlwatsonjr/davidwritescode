@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-	<div id="content" class="narrowcolumn">
+	<section class="main-content">
+		<?php get_template_part('template_parts/content_not_found'); ?>
+	</section>
 
-		<h2 class="center">Error 404 - Not Found</h2>
-
-	</div>
-
-<?php get_sidebar(); ?>
+	<aside class="sidebar">
+		<?php get_sidebar(); ?>
+	</aside>
 
 <?php get_footer(); ?>
