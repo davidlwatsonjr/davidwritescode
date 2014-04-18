@@ -6,7 +6,7 @@
   }
 
   h1 {
-    color: #11487d;
+    color: $color-dark-text;
     font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
     font-size: 40px;
     font-weight: normal;
@@ -93,12 +93,12 @@
     }
 
     a {
-      color: #11487d;
+      color: $color-dark-text;
     }
   }
 
   h2 {
-    color: #0f74d9;
+    color: $color-light-text;
     font: 12px/16px Georgia, "Times New Roman", Times, serif;
   }
 

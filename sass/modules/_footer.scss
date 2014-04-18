@@ -1,5 +1,5 @@
 .footer {
-  background: #0b478f;
+  background: $color-dark-background;
   color: #fff;
   font-size: 9px;
 
@@ -16,7 +16,7 @@
     position: relative;
 
     &:before {
-      background: #7899bf;
+      background: $color-lighter-background;
       content: '';
       height: 14px;
       left: 0;
@@ -59,7 +59,7 @@
     }
 
     a {
-      color: #a8c7ec;
+      color: $color-light-link;
     }
 
     .left {
@@ -74,11 +74,11 @@
   }
 
   .right p {
-    color: #5483ba;
+    color: $color-darker-text;
   }
 
   .textwidget {
-    color: #5483ba;
+    color: $color-darker-text;
   }
 
   .credits {
@@ -86,7 +86,7 @@
     margin-top: 35px;
 
     a {
-      color: #a8c7ec;
+      color: $color-light-link;
     }
   }
 }

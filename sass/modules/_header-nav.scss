@@ -26,11 +26,11 @@
   }
 
   ul {
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#177fe9), to(#0e5dab));
-    background: -webkit-linear-gradient(#177fe9 0%, #0e5dab 100%);
-    background: -moz-linear-gradient(#177fe9 0%, #0e5dab 100%);
-    background: -o-linear-gradient(#177fe9 0%, #0e5dab 100%);
-    background: linear-gradient(#177fe9 0%, #0e5dab 100%);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from($color-light), to($color-dark));
+    background: -webkit-linear-gradient($color-light 0%, $color-dark 100%);
+    background: -moz-linear-gradient($color-light 0%, $color-dark 100%);
+    background: -o-linear-gradient($color-light 0%, $color-dark 100%);
+    background: linear-gradient($color-light 0%, $color-dark 100%);
     background-repeat: repeat-x;
     border-bottom: 1px solid #fff;
     @include box-shadow(0 1px 5px #575757);
@@ -47,7 +47,7 @@
 
     // /* Drop Down Menu */
     ul {
-      background: #0e5daa;
+      background: $color-dark;
       display: none;
       font-size: 13px;
       height: auto;
@@ -81,7 +81,7 @@
         padding: 4px 10px;
 
         &:hover {
-          background: #1069c0;
+          background: $color-dark-link-hover;
         }
       }
     }
@@ -92,11 +92,11 @@
   .current_page_ancestor a,
   .current-menu-item a,
   .current-menu-ancestor a {
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#3a92eb), to(#3275b7));
-    background: -webkit-linear-gradient(#3a92eb, #3275b7);
-    background: -moz-linear-gradient(#3a92eb, #3275b7);
-    background: -o-linear-gradient(#3a92eb, #3275b7);
-    background: linear-gradient(#3a92eb, #3275b7);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from($color-light-lighter), to($color-dark-lighter));
+    background: -webkit-linear-gradient($color-light-lighter, $color-dark-lighter);
+    background: -moz-linear-gradient($color-light-lighter, $color-dark-lighter);
+    background: -o-linear-gradient($color-light-lighter, $color-dark-lighter);
+    background: linear-gradient($color-light-lighter, $color-dark-lighter);
   }
 
   .home a {

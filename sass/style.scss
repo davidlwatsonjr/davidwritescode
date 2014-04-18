@@ -16,6 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @import 'compass';
 @import 'dwc';
+@import 'colors';
 
 *,
 *:before,
@@ -26,7 +27,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 html {
-  background: #0b478f;
+  background: $color-dark-background;
 }
 
 body {
@@ -48,7 +49,7 @@ body {
   font: 14px/21px Arial, Helvetica, sans-serif;
 
   &:before {
-    background: #121d4c;
+    background: $color-very-dark-background;
     content: '';
     display: block;
     height: 7px;
@@ -166,7 +167,7 @@ td {
 
 .post h2,
 .type-page h2 {
-  color: #0e5daa;
+  color: $color-dark;
   font-size: 24px;
   font-weight: normal;
   line-height: 28px;
@@ -175,7 +176,7 @@ td {
 
 .post h2 a,
 .type-page h2 a {
-  color: #0e5daa;
+  color: $color-dark;
   text-decoration: none;
 }
 
@@ -352,7 +353,7 @@ td {
   }
 
   a {
-    color: #0e5daa;
+    color: $color-dark;
 
     &:hover {
       color: #3b3b3b;
