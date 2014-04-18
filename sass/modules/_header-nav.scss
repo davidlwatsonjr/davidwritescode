@@ -3,12 +3,12 @@
 
   &:before,
   &:after {
+    border: 5px solid transparent;
+    border-top: 5px solid $color-dark-ribbon-back;
     content: '';
     display: none;
-    height: 46px;
     position: absolute;
-    top: 0;
-    width: 10px;
+    top: 100%;
 
     @media screen and (min-width: 975px) {
       display: block;
@@ -16,12 +16,12 @@
   }
 
   &:before {
-    @extend .dwc-topmenu-corner-left;
+    border-right: 5px solid $color-dark-ribbon-back;
     left: -10px;
   }
 
   &:after {
-    @extend .dwc-topmenu-corner-right;
+    border-left: 5px solid $color-dark-ribbon-back;
     right: -10px;
   }
 
