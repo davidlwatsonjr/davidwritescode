@@ -3,8 +3,8 @@
 
   &:before,
   &:after {
-    border: 5px solid transparent;
-    border-top: 5px solid $color-dark-ribbon-back;
+    border: 49px solid transparent;
+    border-top: 49px solid $color-dark-ribbon-back;
     content: '';
     display: none;
     position: absolute;
@@ -16,13 +16,13 @@
   }
 
   &:before {
-    border-right: 5px solid $color-dark-ribbon-back;
-    left: -10px;
+    border-right: 49px solid $color-dark-ribbon-back;
+    left: -8px;
   }
 
   &:after {
-    border-left: 5px solid $color-dark-ribbon-back;
-    right: -10px;
+    border-left: 49px solid $color-dark-ribbon-back;
+    right: -8px;
   }
 
   ul {
