@@ -50,12 +50,11 @@
     ul {
       background: $color-dark;
       display: none;
-      font-size: 13px;
       height: auto;
       left: 0;
-      line-height: 18px;
+      padding: 0;
       position: absolute;
-      top: 36px;
+      top: 100%;
       width: 200px;
 
       ul {
@@ -67,6 +66,13 @@
 
   li {
     display: inline-block;
+    position: relative;
+
+    &:hover {
+      > ul {
+        display: block;
+      }
+    }
 
     a {
       color: #fff;
