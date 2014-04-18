@@ -26,6 +26,7 @@
   }
 
   ul {
+    background: $color-midpoint;
     background: -webkit-gradient(linear, 0 0, 0 100%, from($color-light), to($color-dark));
     background: -webkit-linear-gradient($color-light 0%, $color-dark 100%);
     background: -moz-linear-gradient($color-light 0%, $color-dark 100%);
@@ -92,6 +93,7 @@
   .current_page_ancestor a,
   .current-menu-item a,
   .current-menu-ancestor a {
+    background: $color-midpoint-lighter;
     background: -webkit-gradient(linear, 0 0, 0 100%, from($color-light-lighter), to($color-dark-lighter));
     background: -webkit-linear-gradient($color-light-lighter, $color-dark-lighter);
     background: -moz-linear-gradient($color-light-lighter, $color-dark-lighter);
