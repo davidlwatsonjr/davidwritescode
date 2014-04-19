@@ -5,9 +5,9 @@
 
 		<footer class="footer">
 			<div class="footer-content">
-				<a class="link-to-top" href="#top">Top</a>
 				<span class="random-message"><?php echo dwc_random_message(); ?></span>
 				<div class="right">
+					<a class="link-to-top" href="#top">Top</a>
 					<?php wp_nav_menu([
 						'fallback_cb' => 'dwc_page_menu_flat',
 						'container' => false,
