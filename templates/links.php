@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Links
+*/
+?>
 <?php get_header(); ?>
 
     <section class="main-content">
