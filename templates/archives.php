@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: something archives
+*/
+?>
 <?php get_header(); ?>
 
     <section class="main-content">
