@@ -62,7 +62,7 @@
 					<h2><?php bloginfo('description'); ?></h2>
 				</div>
 
-				<?php get_template_part('template_parts/searchform'); ?>
+				<?php get_search_form(); ?>
 
 				<nav class="header-nav">
 					<?php wp_nav_menu( array('fallback_cb' => 'dwc_page_menu', 'depth' => '3', 'theme_location' => 'primary', 'link_before' => '', 'link_after' => '', 'container' => false) ); ?>

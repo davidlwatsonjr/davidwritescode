@@ -9,7 +9,7 @@
 		<?php else : ?>
 
 			<h2 class="page-type-heading">No posts found. Try a different search?</h2>
-			<?php get_template_part('template_parts/searchform'); ?>
+			<?php get_search_form(); ?>
 
 		<?php endif; ?>
 	</section>
