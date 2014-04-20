@@ -14,7 +14,7 @@
 				</div>
 
 				<footer class="post-footer">
-					<?php wp_link_pages(array('before' => '<div class="post-links-pages"><strong>Pages:</strong> ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
+					<?php wp_link_pages(array('before' => '<div class="post-links-pages">Pages: ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
 					<?php // get_template_part('template_parts/rrssb'); ?>
 					<?php get_template_part('template_parts/post-meta'); ?>
 					<?php get_template_part('template_parts/post_navigation'); ?>

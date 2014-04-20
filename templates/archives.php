@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: something archives
+Template Name: Archives
 */
 ?>
 <?php get_header(); ?>

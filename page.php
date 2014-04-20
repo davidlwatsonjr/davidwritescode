@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 
-		<div class="page-content">
+		<section class="page-content">
+            <?php edit_post_link('Edit'); ?>
 			<?php the_content(); ?>
-		</div>
+		</section>
 
 	<?php endwhile; endif; ?>
 
