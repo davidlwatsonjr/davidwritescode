@@ -4,7 +4,7 @@ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-widget-are
 	<div class="widget-block">
 		<h2>Category</h2>
 		<ul>
-		        <?php wp_list_categories('show_count=1&title_li='); ?>
+			<?php wp_list_categories('show_count=1&title_li='); ?>
 		</ul>
 	</div>
 
@@ -15,15 +15,15 @@ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-widget-are
 		</ul>
 	</div>
 
-	<?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>
-	<div class="widget-block">
-		<h2>Meta</h2>
-		<ul>
-			<?php wp_register(); ?>
-			<li><?php wp_loginout(); ?></li>
-			<?php wp_meta(); ?>
-		</ul>
-	</div>
-	<?php } ?>
+	<?php /* If this is the frontpage */ if ( is_home() || is_page() ) : ?>
+		<div class="widget-block">
+			<h2>Meta</h2>
+			<ul>
+				<?php wp_register(); ?>
+				<li><?php wp_loginout(); ?></li>
+				<?php wp_meta(); ?>
+			</ul>
+		</div>
+	<?php endif; ?>
 
 <?php endif; ?>
