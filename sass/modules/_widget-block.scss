@@ -1,0 +1,21 @@
+.widget-block {
+  margin: 15px;
+
+  ul {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  li {
+    border-bottom: #efefef 1px solid;
+
+    &:last-child {
+      border: 0;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 0 10px 5px;
+    }
+  }
+}

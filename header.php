@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title><?php dwc_title(); ?></title>
-		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="<?php dwc_echo_og_('description'); ?>">
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
@@ -22,15 +22,19 @@
 		<meta name="msapplication-TileColor" content="#0E5DAA">
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-		<link rel="author" href="https://plus.google.com/113092115740208953129/posts" />
+		<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+		<meta property="og:url" content="<?php dwc_echo_og_('url'); ?>"/>
+		<meta property="og:type" content="<?php dwc_echo_og_('type'); ?>"/>
+		<meta property="og:title" content="<?php dwc_echo_og_('title'); ?>"/>
+		<meta property="og:description" content="<?php dwc_echo_og_('description'); ?>"/>
 
-		<meta name="twitter:creator" content="@davidlwatsonjr">
-
-		<meta property="og:sitename" content="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>"/>
-		<meta property="og:url" content="<?php echo home_url(); ?>/"/>
-		<meta property="og:title" content="<?php dwc_title(); ?>"/>
-		<meta property="og:type" content="blog"/>
 		<meta property="fb:admins" content="679587573"/>
+		<meta property="article:author" content="679587573"/>
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@davidlwatsonjr" />
+
+		<link rel="author" href="https://plus.google.com/113092115740208953129/posts" />
 
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 

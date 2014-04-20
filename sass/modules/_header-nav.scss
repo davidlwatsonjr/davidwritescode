@@ -35,9 +35,9 @@
     background-repeat: repeat-x;
     border-bottom: 1px solid #fff;
     @include box-shadow(0 1px 5px #575757);
-    font-size: 14px;
+    font-size: 1.4rem;
     height: 37px;
-    line-height: 36px;
+    line-height: 3.6rem;
     position: relative;
 
     @media screen and (min-width: 975px) {

@@ -27,7 +27,7 @@ function dwc_widgets_init() {
 		'name' => __( 'Sidebar Widget Area', 'dwc' ),
 		'id' => 'sidebar-widget-area',
 		'description' => __( 'The sidebar widget area', 'dwc' ),
-		'before_widget' => '<div class="widgetBlock">',
+		'before_widget' => '<div class="widget-block">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
@@ -136,6 +136,114 @@ function dwc_echo_archive_page_title() {
 		/* If this is a paged archive */
 		echo 'Blog Archives';
 	}
+}
+
+function dwc_clean_og_content($content) {
+	return trim(esc_attr(strip_tags(stripslashes($content))));
+}
+
+function dwc_build_og_tags() {
+	global $dwc_og_tags;
+
+	if (!isset($dwc_og_tags)) {
+		$dwc_og_tags = [];
+	}
+
+	if (isset($dwc_og_tags['type'], $dwc_og_tags['url'], $dwc_og_tags['title'], $dwc_og_tags['description'])) {
+		return;
+	}
+
+	$dwc_og_tags['type'] = 'article';
+	if (is_singular()) {
+		//It's a Post or a Page or an attachment page - It can also be the homepage if it's set as a page
+		global $post;
+		$dwc_og_tags['title'] = dwc_clean_og_content($post->post_title);
+		$dwc_og_tags['url'] = get_permalink();
+
+		$dwc_og_tags['description'] = trim($post->post_excerpt);
+		if ( $dwc_og_tags['description'] === '' ) {
+			//If no excerpt we grab it from the content
+			$dwc_og_tags['description'] = $post->post_content;
+		}
+		$dwc_og_tags['description'] = dwc_clean_og_content(strip_shortcodes($dwc_og_tags['description']));
+		$dwc_og_tags['description'] = substr($dwc_og_tags['description'], 0, 300);
+	} else {
+		global $wp_query;
+		//Other pages - Defaults
+		$dwc_og_tags['title'] = dwc_clean_og_content(get_bloginfo('name'));
+		//$dwc_og_tags['url'] = get_option('home').(intval($fb_url_add_trailing)==1 ? '/' : ''); //2013-11-4 changed from 'siteurl' to 'home'
+		$dwc_og_tags['url'] = ((!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];  //Not really canonical but will work for now
+
+		$dwc_og_tags['description'] = dwc_clean_og_content(get_bloginfo('description'));
+
+		if (is_category()) {
+			$dwc_og_tags['title'] = dwc_clean_og_content(single_cat_title('', false));
+			$term = $wp_query->get_queried_object();
+			$dwc_og_tags['url'] = get_term_link($term, $term->taxonomy);
+			$cat_desc = dwc_clean_og_content(category_description());
+			if ($cat_desc != '') {
+				$dwc_og_tags['description'] = $cat_desc;
+			}
+		} elseif (is_tag()) {
+			$dwc_og_tags['title'] = dwc_clean_og_content(single_tag_title('', false));
+			$term = $wp_query->get_queried_object();
+			$dwc_og_tags['url'] = get_term_link($term, $term->taxonomy);
+			$tag_desc = dwc_clean_og_content(tag_description());
+			if ($tag_desc != '') {
+				$dwc_og_tags['description'] = $tag_desc;
+			}
+		} elseif (is_tax()) {
+			$dwc_og_tags['title'] = dwc_clean_og_content(single_term_title('', false));
+			$term = $wp_query->get_queried_object();
+			$dwc_og_tags['url'] = get_term_link($term, $term->taxonomy);
+		} elseif (is_search()) {
+			$dwc_og_tags['title'] = dwc_clean_og_content(__('Search for').' "'.get_search_query().'"');
+			$dwc_og_tags['url'] = get_search_link();
+		} elseif (is_author()) {
+			$dwc_og_tags['title'] = dwc_clean_og_content(get_the_author_meta('display_name', get_query_var('author')));
+			$dwc_og_tags['url'] = get_author_posts_url(get_query_var('author'), get_query_var('author_name'));
+		} elseif (is_archive()) {
+			if (is_day()) {
+				$dwc_og_tags['title'] = dwc_clean_og_content(get_query_var('day').' '.single_month_title(' ', false).' '.__('Archives'));
+				$dwc_og_tags['url'] = get_day_link(get_query_var('year'), get_query_var('monthnum'), get_query_var('day'));
+			} elseif (is_month()) {
+				$dwc_og_tags['title'] = dwc_clean_og_content(single_month_title(' ', false).' '.__('Archives'));
+				$dwc_og_tags['url'] = get_month_link(get_query_var('year'), get_query_var('monthnum'));
+			} elseif (is_year()) {
+				$dwc_og_tags['title'] = dwc_clean_og_content(get_query_var('year').' '.__('Archives'));
+				$dwc_og_tags['url'] = get_year_link(get_query_var('year'));
+			}
+		} else {
+			//Others... Defaults already set up there
+		}
+	}
+
+	if (is_front_page()) {
+		/* Fix homepage type when it's a static page */
+		$dwc_og_tags['url'] = get_option('home').'/';
+		$dwc_og_tags['type'] = 'blog';
+	}
+
+	//If no description let's just add the title
+	if ($dwc_og_tags['description'] == '') {
+		$dwc_og_tags['description'] = $dwc_og_tags['title'];
+	}
+}
+
+function dwc_echo_og_($property) {
+	global $dwc_og_tags;
+
+	dwc_build_og_tags();
+
+	echo $dwc_og_tags[$property];
+}
+
+function dwc_echo_og_title() {
+	dwc_echo_og_('title');
+}
+
+function dwc_echo_og_url() {
+	dwc_echo_og_('url');
 }
 
 function dwc_random_message() {
