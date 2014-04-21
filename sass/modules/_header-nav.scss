@@ -1,52 +1,9 @@
 .header-nav {
-  position: relative;
-
-  &:before,
-  &:after {
-    border-bottom-color: transparent;
-    border-color: $color-dark-ribbon-back;
-    border-style: solid;
-    border-width: 4px;
-    content: '';
-    display: none;
-    position: absolute;
-    top: 100%;
-
-    @media screen and (min-width: 975px) {
-      display: block;
-    }
-  }
-
-  &:before {
-    border-left-color: transparent;
-    left: -8px;
-  }
-
-  &:after {
-    border-right-color: transparent;
-    right: -8px;
-  }
-
   ul {
-    background: $color-midpoint;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from($color-light), to($color-dark));
-    background: -webkit-linear-gradient($color-light 0%, $color-dark 100%);
-    background: -moz-linear-gradient($color-light 0%, $color-dark 100%);
-    background: -o-linear-gradient($color-light 0%, $color-dark 100%);
-    background: linear-gradient($color-light 0%, $color-dark 100%);
-    background-repeat: repeat-x;
-    border-bottom: 1px solid #fff;
-    @include box-shadow(0 1px 5px #575757);
     font-size: 1.4rem;
     height: 37px;
     line-height: 3.6rem;
     position: relative;
-
-    @media screen and (min-width: 975px) {
-      left: -9px;
-      padding: 0 9px;
-      width: 958px;
-    }
 
     // /* Drop Down Menu */
     ul {

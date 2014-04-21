@@ -1,8 +1,42 @@
 .header {
+  background: $color-header-ribbon;
+  @include box-shadow(0 0 9px 0 #575757);
+  margin-left: -15px;
+  padding: 0 33px;
   position: relative;
 
+  @media screen and (min-width: 970px) {
+    width: calc(100% + 30px);
+  }
+
+  &:before,
+  &:after {
+    border-bottom-color: transparent;
+    border-color: $color-dark-ribbon-back;
+    border-style: solid;
+    border-width: 7px;
+    content: '';
+    display: none;
+    position: absolute;
+    top: 100%;
+
+    @media screen and (min-width: 970px) {
+      display: block;
+    }
+  }
+
+  &:before {
+    border-left-color: transparent;
+    left: -8px;
+  }
+
+  &:after {
+    border-right-color: transparent;
+    right: -8px;
+  }
+
   .branding {
-    padding: 22px 28px;
+    padding: 22px 10px;
   }
 
   h1 {
