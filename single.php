@@ -6,8 +6,8 @@
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<header class="post-header">
 					<?php edit_post_link('Edit'); ?>
-					<h2 class="post-title"><?php the_title(); ?></h2>
 					<?php get_template_part('template_parts/post-meta'); ?>
+					<h2 class="post-title"><?php the_title(); ?></h2>
 				</header>
 
 				<div class="post-content">
