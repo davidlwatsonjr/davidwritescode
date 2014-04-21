@@ -163,6 +163,11 @@ td {
   &:last-child {
     margin-bottom: 0;
   }
+
+  .posts-listing & {
+    background: $color-posts-article-background;
+    padding: 15px;
+  }
 }
 
 .post-edit-link {
@@ -197,14 +202,27 @@ td {
   font-size: 1.2rem;
 }
 
+.post-tags {
+  line-height: 1.6rem;
+
+  a {
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-style: italic;
+    padding: 3px;
+    text-decoration: none;
+  }
+}
+
 .post-content {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   font-family: $typeface-serif;
   height: 100%;
   margin: 10px 0;
-  padding: 20px 0;
   overflow: hidden;
+  padding: 10px 0;
 
   // /* headings */
   h1,

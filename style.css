@@ -724,6 +724,11 @@ td {
 .type-page:last-child {
   margin-bottom: 0;
 }
+.posts-listing .post, .posts-listing
+.type-page {
+  background: #f7f7f8;
+  padding: 15px;
+}
 
 .post-edit-link {
   background: #f1f1f1;
@@ -754,14 +759,26 @@ td {
   font-size: 1.2rem;
 }
 
+.post-tags {
+  line-height: 1.6rem;
+}
+.post-tags a {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 3px;
+  text-decoration: none;
+}
+
 .post-content {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   font-family: Georgia, serif;
   height: 100%;
   margin: 10px 0;
-  padding: 20px 0;
   overflow: hidden;
+  padding: 10px 0;
 }
 .post-content h1,
 .post-content h2,
