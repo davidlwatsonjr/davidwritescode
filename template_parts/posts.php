@@ -9,6 +9,7 @@
 					<?php the_title(); ?>
 				</a>
 			</h2>
+			<?php get_template_part('template_parts/post-meta'); ?>
 		</header>
 
 		<div class="post-content">
@@ -17,7 +18,6 @@
 		</div>
 
 		<footer class="post-footer">
-			<?php get_template_part('template_parts/post-meta'); ?>
 		</footer>
 	</article>
 <?php endwhile; ?>
