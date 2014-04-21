@@ -10,6 +10,7 @@
 				</a>
 			</h2>
 			<?php get_template_part('template_parts/post-meta'); ?>
+			<?php the_tags( '<p class="post-tags">', ', ', '</p>'); ?>
 		</header>
 
 		<div class="post-content">
