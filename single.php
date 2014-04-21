@@ -21,7 +21,9 @@
 				</footer>
 			</article>
 
-			<?php comments_template(); ?>
+			<div id="comments">
+				<?php comments_template(); ?>
+			</div>
 
 		<?php endwhile; endif; ?>
 	</section>
