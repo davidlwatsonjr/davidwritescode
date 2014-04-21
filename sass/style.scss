@@ -43,13 +43,6 @@ body {
   font-family: $typeface-sans-serif;
   font-size: 1.6rem;
   line-height: 2.4rem;
-
-  &:before {
-    background: $color-very-dark-background;
-    content: '';
-    display: block;
-    height: 7px;
-  }
 }
 
 img {
