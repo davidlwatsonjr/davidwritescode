@@ -18,6 +18,7 @@
 		</div>
 
 		<footer class="post-footer">
+	        <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 		</footer>
 	</article>
 <?php endwhile; ?>
