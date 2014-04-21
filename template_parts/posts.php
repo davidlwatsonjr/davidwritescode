@@ -19,7 +19,7 @@
 			</div>
 
 			<footer class="post-footer">
-				<?php the_tags( '<p class="post-tags">', ' &bull; ', '</p>'); ?>
+				<?php get_template_part('template_parts/post-tags'); ?>
 			</footer>
 		</article>
 	<?php endwhile; ?>

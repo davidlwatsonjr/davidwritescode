@@ -8,7 +8,7 @@
 					<?php edit_post_link('Edit'); ?>
 					<?php get_template_part('template_parts/post-meta'); ?>
 					<h2 class="post-title"><?php the_title(); ?></h2>
-					<?php the_tags( '<p class="post-tags">', ', ', '</p>'); ?>
+					<?php get_template_part('template_parts/post-tags'); ?>
 				</header>
 
 				<div class="post-content">
@@ -18,15 +18,15 @@
 				<footer class="post-footer">
 					<?php wp_link_pages(array('before' => '<div class="post-links-pages">Pages: ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
 					<?php get_template_part('template_parts/post-meta'); ?>
-					<?php the_tags( '<p class="post-tags">', ', ', '</p>'); ?>
+					<?php get_template_part('template_parts/post-tags'); ?>
 					<?php // get_template_part('template_parts/rrssb'); ?>
 					<?php get_template_part('template_parts/post_navigation'); ?>
 				</footer>
 			</article>
 
-			<div id="comments">
+			<section id="comments">
 				<?php comments_template(); ?>
-			</div>
+			</section>
 
 		<?php endwhile; endif; ?>
 	</section>
