@@ -1,8 +1,39 @@
 .footer {
-  background: $color-dark-background;
+  background: $color-header-ribbon;
   color: #fff;
   font-size: 1.1rem;
   line-height: 1.6rem;
+
+  @media screen and (min-width: 970px) {
+    margin: 0 -15px;
+    padding: 0 33px;
+  }
+
+  &:before,
+  &:after {
+    border-color: $color-header-ribbon-back;
+    border-style: solid;
+    border-width: 7px;
+    border-bottom-color: transparent;
+    bottom: 100%;
+    content: '';
+    display: none;
+    position: absolute;
+
+    @media screen and (min-width: 970px) {
+      display: block;
+    }
+  }
+
+  &:before {
+    border-left-color: transparent;
+    left: 0;
+  }
+
+  &:after {
+    border-right-color: transparent;
+    right: 0;
+  }
 
   ul {
     padding-bottom: 6px;

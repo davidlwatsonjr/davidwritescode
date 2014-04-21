@@ -92,10 +92,13 @@ td {
 // /* Start: page-wrapper */
 .page-wrapper {
   background: #fff;
-  @include box-shadow(0 0 10px #575757);
   margin: 0 auto;
   max-width: 940px;
-  padding: 10px 0 0;
+
+  @media screen and (min-width: 970px) {
+    @include box-shadow(0 0 10px #575757);
+    padding: 10px 0;
+  }
 }
 
 // /* End: page-wrapper */

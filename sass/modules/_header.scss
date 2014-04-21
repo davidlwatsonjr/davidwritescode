@@ -140,8 +140,9 @@
   }
 
   .search-form {
+    @include border-radius(5px);
+
     @media screen and (min-width: 960px) {
-      @include border-radius(5px);
       position: absolute;
       right: 30px;
       top: 26px;
