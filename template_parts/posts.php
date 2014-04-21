@@ -18,7 +18,6 @@
 
 		<footer class="post-footer">
 			<?php get_template_part('template_parts/post-meta'); ?>
-			<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 		</footer>
 	</article>
 <?php endwhile; ?>
