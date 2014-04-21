@@ -40,7 +40,6 @@
   }
 
   h1 {
-    color: $color-dark-text;
     font-family: $typeface-bold-sans-serif;
     font-size: 4rem;
     font-weight: normal;
@@ -128,6 +127,10 @@
 
     a {
       color: #fff;
+
+      &:hover {
+        color: $color-header-link-text-hover;
+      }
     }
   }
 

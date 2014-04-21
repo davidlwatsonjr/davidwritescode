@@ -1,3 +1,18 @@
+/*
+Theme Name: David Writes Theme
+Original Theme Name: Light Clean Blue
+Original Theme URI: http://handla-online.org/light-clean-blue
+Original Theme Author URI: http://handla-online.org/
+Author URI: http://davidwritescode.com
+Description: Light, stylish, simple and readable with modern menu. SEO-friendly theme structure.
+Original Author: handla-online.org
+Author: davidlwatsonjr
+Light CLean Blue Version: 2.5
+Version: 1.0
+Tags: blue, white, two-columns, fixed-width, editor-style, sticky-post
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
 @import 'compass';
 
 @import 'compass/reset';
@@ -19,26 +34,11 @@
 }
 
 html {
-  background: $color-dark-background;
+  background: $color-body-background;
   font-size: 62.5%;
 }
 
 body {
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ddd), to(#fff)),
-              -webkit-gradient(linear, 0 100%, 0 0, from(#ddd), to(#fff));
-  background: -webkit-linear-gradient(#ddd 0%, #fff 100%),
-              -webkit-linear-gradient(bottom, #ddd 0%, #fff 100%);
-  background: -moz-linear-gradient(#ddd 0%, #fff 100%),
-              -moz-linear-gradient(to top, #ddd 0%, #fff 100%);
-  background: -o-linear-gradient(#ddd 0%, #fff 100%),
-              -o-linear-gradient(to top, #ddd 0%, #fff 100%);
-  background: linear-gradient(#ddd 0%, #fff 100%),
-              linear-gradient(to top, #ddd 0%, #fff 100%);
-  background-color: #fff;
-  background: $color-body-background;
-  background-position: 0 0, 0 100%;
-  background-repeat: repeat-x;
-  background-size: 100% 287px, 100% 287px;
   color: #575757;
   font-family: $typeface-sans-serif;
   font-size: 1.6rem;

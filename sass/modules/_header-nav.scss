@@ -7,7 +7,8 @@
 
     // /* Drop Down Menu */
     ul {
-      background: $color-dark;
+      background: $color-header-ribbon;
+      @include box-shadow(0 0 5px 0 #575757);
       display: none;
       height: auto;
       left: 0;
@@ -45,10 +46,6 @@
 
       a {
         padding: 4px 10px;
-
-        &:hover {
-          background: $color-dark-link-hover;
-        }
       }
     }
   }
@@ -58,12 +55,7 @@
   .current_page_ancestor a,
   .current-menu-item a,
   .current-menu-ancestor a {
-    background: $color-midpoint-lighter;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from($color-light-lighter), to($color-dark-lighter));
-    background: -webkit-linear-gradient($color-light-lighter, $color-dark-lighter);
-    background: -moz-linear-gradient($color-light-lighter, $color-dark-lighter);
-    background: -o-linear-gradient($color-light-lighter, $color-dark-lighter);
-    background: linear-gradient($color-light-lighter, $color-dark-lighter);
+    background: $color-header-nav-link-hover;
   }
 
   .home a {
