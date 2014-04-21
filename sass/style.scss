@@ -1,8 +1,12 @@
 @import 'compass';
 
-@import 'dwc';
+@import 'compass/reset';
+
 @import 'colors';
 @import 'typefaces';
+
+@import 'dwc/*.png';
+@include all-dwc-sprites;
 
 @import 'lib/rrssb';
 
@@ -31,6 +35,7 @@ body {
   background: linear-gradient(#ddd 0%, #fff 100%),
               linear-gradient(to top, #ddd 0%, #fff 100%);
   background-color: #fff;
+  background: $color-body-background;
   background-position: 0 0, 0 100%;
   background-repeat: repeat-x;
   background-size: 100% 287px, 100% 287px;
