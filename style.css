@@ -734,7 +734,7 @@ td {
   background: #f1f1f1;
   border-radius: 4px;
   float: right;
-  padding: 3px;
+  padding: 4px;
   text-decoration: none !important;
 }
 .post-edit-link:hover {
@@ -763,12 +763,16 @@ td {
   line-height: 1.6rem;
 }
 .post-tags a {
-  border-radius: 3px;
+  background: #f1f1f1;
+  border-radius: 4px;
   display: inline-block;
   font-size: 1.2rem;
   font-style: italic;
-  padding: 3px;
+  padding: 4px;
   text-decoration: none;
+}
+.post-tags a:hover {
+  background: #ddd;
 }
 
 .post-content {
