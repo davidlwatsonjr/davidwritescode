@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="<?php dwc_echo_og_('description'); ?>">
 
-    <?php get_template_part('template_parts/favicon'); ?>
+		<?php get_template_part('template_parts/favicon'); ?>
 
 		<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
 		<meta property="og:url" content="<?php dwc_echo_og_('url'); ?>"/>
