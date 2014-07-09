@@ -131,7 +131,7 @@ function dwc_echo_archive_page_title() {
 		echo get_the_time('Y');
 	} elseif (is_author()) {
 		/* If this is an author archive */
-		echo 'Author Archive';
+		echo 'Posts by '.get_the_author();
 	} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
 		/* If this is a paged archive */
 		echo 'Blog Archives';
