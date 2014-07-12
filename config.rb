@@ -1,7 +1,7 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/wp-content/themes/davidwritescode"
+http_path = "/blog/wp-content/themes/davidwritescode"
 css_dir = "."
 sass_dir = "sass"
 images_dir = "images"
