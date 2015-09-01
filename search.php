@@ -14,8 +14,6 @@
 		<?php endif; ?>
 	</section>
 
-	<aside class="sidebar">
-		<?php get_sidebar(); ?>
-	</aside>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

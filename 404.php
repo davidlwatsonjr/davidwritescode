@@ -4,8 +4,6 @@
 		<?php get_template_part('template_parts/content_not_found'); ?>
 	</section>
 
-	<aside class="sidebar">
-		<?php get_sidebar(); ?>
-	</aside>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
