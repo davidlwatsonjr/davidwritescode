@@ -90,11 +90,11 @@ td {
 // /* Start: page-wrapper */
 .page-wrapper {
   background: #fff;
+  @include box-shadow(0 0 10px #575757);
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 1300px;
 
-  @media screen and (min-width: 970px) {
-    @include box-shadow(0 0 10px #575757);
+  @media screen and (min-width: 1347px) {
     padding: 10px 0;
   }
 }
@@ -134,7 +134,7 @@ td {
 
   @media screen and (min-width: 960px) {
     float: left;
-    max-width: 690px;
+    max-width: 73.405%;
   }
 
   a {
@@ -379,7 +379,7 @@ td {
     @include box-shadow(-1px 1px 10px #575757);
     border-radius: 0 0 0 5px;
     float: right;
-    max-width: 247px;
+    max-width: 26.277%;
   }
 
   h3 {

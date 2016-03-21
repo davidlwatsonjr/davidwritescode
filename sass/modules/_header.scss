@@ -4,7 +4,7 @@
   padding: 0 18px;
   position: relative;
 
-  @media screen and (min-width: 970px) {
+  @media screen and (min-width: 1347px) {
     margin: 0 -15px;
     padding: 0 33px;
   }
@@ -20,7 +20,7 @@
     position: absolute;
     top: 100%;
 
-    @media screen and (min-width: 970px) {
+    @media screen and (min-width: 1347px) {
       display: block;
     }
   }
@@ -149,7 +149,7 @@
       position: absolute;
       right: 30px;
       top: 26px;
-      width: 327px;
+      width: 33.712%;
     }
   }
 }

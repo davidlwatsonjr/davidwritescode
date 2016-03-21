@@ -3,7 +3,7 @@ Theme Name: David Writes Theme
 Original Theme Name: Light Clean Blue
 Original Theme URI: http://handla-online.org/light-clean-blue
 Original Theme Author URI: http://handla-online.org/
-Author URI: http://davidwritescode.com
+Author URI: http://davidlwatsonjr.com
 Description: Light, stylish, simple and readable with modern menu. SEO-friendly theme structure.
 Original Author: handla-online.org
 Author: davidlwatsonjr
@@ -145,14 +145,14 @@ td {
 
 .page-wrapper {
   background: #fff;
+  -webkit-box-shadow: 0 0 10px #575757;
+  -moz-box-shadow: 0 0 10px #575757;
+  box-shadow: 0 0 10px #575757;
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 1300px;
 }
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1347px) {
   .page-wrapper {
-    -webkit-box-shadow: 0 0 10px #575757;
-    -moz-box-shadow: 0 0 10px #575757;
-    box-shadow: 0 0 10px #575757;
     padding: 10px 0;
   }
 }
@@ -165,7 +165,7 @@ td {
   padding: 0 18px;
   position: relative;
 }
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1347px) {
   .header {
     margin: 0 -15px;
     padding: 0 33px;
@@ -181,7 +181,7 @@ td {
   position: absolute;
   top: 100%;
 }
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1347px) {
   .header:before, .header:after {
     display: block;
   }
@@ -320,7 +320,7 @@ td {
     position: absolute;
     right: 30px;
     top: 26px;
-    width: 327px;
+    width: 33.712%;
   }
 }
 
@@ -412,7 +412,7 @@ td {
 @media screen and (min-width: 960px) {
   .main-content {
     float: left;
-    max-width: 690px;
+    max-width: 73.405%;
   }
 }
 .main-content a {
@@ -622,7 +622,7 @@ td {
     box-shadow: -1px 1px 10px #575757;
     border-radius: 0 0 0 5px;
     float: right;
-    max-width: 247px;
+    max-width: 26.277%;
   }
 }
 .sidebar h3 {
@@ -703,7 +703,7 @@ td {
   padding: 14px;
   position: relative;
 }
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1347px) {
   .footer {
     margin: 0 -15px;
     padding: 14px 33px;
@@ -719,7 +719,7 @@ td {
   display: none;
   position: absolute;
 }
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1347px) {
   .footer:before, .footer:after {
     display: block;
   }
