@@ -6,8 +6,8 @@
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<header class="post-header">
 					<?php edit_post_link('Edit'); ?>
-					<?php get_template_part('template_parts/post-meta'); ?>
 					<h2 class="post-title"><?php the_title(); ?></h2>
+					<?php get_template_part('template_parts/post-meta'); ?>
 					<?php get_template_part('template_parts/post-tags'); ?>
 				</header>
 
@@ -17,8 +17,6 @@
 
 				<footer class="post-footer">
 					<?php wp_link_pages(array('before' => '<div class="post-links-pages">Pages: ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
-					<?php get_template_part('template_parts/post-meta'); ?>
-					<?php get_template_part('template_parts/post-tags'); ?>
 					<?php // get_template_part('template_parts/rrssb'); ?>
 					<?php get_template_part('template_parts/post_navigation'); ?>
 				</footer>
