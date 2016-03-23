@@ -375,7 +375,7 @@ td {
 // /* Start: Sidebar */
 .sidebar {
   @media screen and (min-width: 960px) {
-    @include box-shadow(-1px 1px 10px #575757);
+    @include box-shadow(-1px 1px 10px #CCC);
     border-radius: 0 0 0 5px;
     float: right;
     max-width: 26.277%;
