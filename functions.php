@@ -171,7 +171,6 @@ function dwc_build_og_tags() {
 		global $wp_query;
 		//Other pages - Defaults
 		$dwc_og_tags['title'] = dwc_clean_og_content(get_bloginfo('name'));
-		//$dwc_og_tags['url'] = get_option('home').(intval($fb_url_add_trailing)==1 ? '/' : ''); //2013-11-4 changed from 'siteurl' to 'home'
 		$dwc_og_tags['url'] = ((!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];  //Not really canonical but will work for now
 
 		$dwc_og_tags['description'] = dwc_clean_og_content(get_bloginfo('description'));
