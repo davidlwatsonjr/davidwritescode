@@ -219,7 +219,7 @@ function dwc_build_og_tags() {
 
 	if (is_front_page()) {
 		/* Fix homepage type when it's a static page */
-		$dwc_og_tags['url'] = get_option('home').'/';
+		$dwc_og_tags['url'] = home_url().'/';
 		$dwc_og_tags['type'] = 'blog';
 	}
 
