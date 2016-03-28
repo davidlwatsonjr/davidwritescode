@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes('xhtml'); ?>>
 	<head>
 		<meta charset="utf-8">
