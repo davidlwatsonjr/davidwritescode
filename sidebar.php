@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar col-md-3">
   <?php   /* Widgetized sidebar, if you have the plugin installed. */
   if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-widget-area') ) : ?>
 

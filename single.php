@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <section class="main-content">
+    <section class="main-content col-md-9">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -17,6 +17,7 @@
 
                 <footer class="post-footer">
                     <?php wp_link_pages(array('before' => '<div class="post-links-pages">Pages: ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
+                    <?php // get_template_part('template_parts/rrssb'); ?>
                     <?php get_template_part('template_parts/post_navigation'); ?>
                 </footer>
             </article>

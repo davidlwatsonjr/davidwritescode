@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <section class="main-content">
+    <section class="main-content col-md-9">
         <?php if (have_posts()) : ?>
 
             <h2 class="page-type-heading">

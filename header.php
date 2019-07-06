@@ -22,6 +22,9 @@
 
         <link rel="author" href="https://plus.google.com/113092115740208953129/posts" />
 
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
         <link rel="alternate" type="application/rss+xml" title="Subscribe to <?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
@@ -36,11 +39,11 @@
     </head>
     <body <?php body_class(); ?> id="top">
         <?php get_template_part('template_parts/google_analytics'); ?>
-        <div class="page-wrapper">
+        <div class="container">
             <header class="header">
                 <div class="branding">
                     <h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
-                    <h2><?php bloginfo('description'); ?></h2>
+                    <h2 class="lead"><?php bloginfo('description'); ?></h2>
                 </div>
 
                 <?php get_search_form(); ?>
@@ -50,4 +53,4 @@
                 </nav>
             </header>
 
-            <div class="content-wrapper">
+            <div class="content-wrapper row">

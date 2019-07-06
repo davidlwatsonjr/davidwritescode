@@ -65,12 +65,13 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 .dwc-sprite, .dwc-search-btn, .search-form .search-btn {
-  background: url('/blog/wp-content/themes/davidwritescode/images/dwc-s6ac9f744b6.png') no-repeat;
+  background-image: url('/blog/wp-content/themes/davidwritescode/images/dwc-s6ac9f744b6.png');
+  background-repeat: no-repeat;
 }
 
 .dwc-search-btn, .search-form .search-btn {
@@ -80,19 +81,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  background: #d5d9dd;
   font-size: 62.5%;
 }
 
 body {
+  background: #d5d9dd;
   color: #575757;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
@@ -143,24 +144,22 @@ td {
   padding: 5px 9px;
 }
 
-.page-wrapper {
+.container {
   background: #fff;
-  -webkit-box-shadow: 0 0 10px #575757;
   -moz-box-shadow: 0 0 10px #575757;
+  -webkit-box-shadow: 0 0 10px #575757;
   box-shadow: 0 0 10px #575757;
-  margin: 0 auto;
-  max-width: 1300px;
 }
 @media screen and (min-width: 1347px) {
-  .page-wrapper {
+  .container {
     padding: 10px 0;
   }
 }
 
 .header {
   background: #005499;
-  -webkit-box-shadow: 0 0 9px 0 #575757;
   -moz-box-shadow: 0 0 9px 0 #575757;
+  -webkit-box-shadow: 0 0 9px 0 #575757;
   box-shadow: 0 0 9px 0 #575757;
   padding: 0 18px;
   position: relative;
@@ -332,8 +331,8 @@ td {
 }
 .header-nav ul ul {
   background: #005499;
-  -webkit-box-shadow: 0 0 5px 0 #575757;
   -moz-box-shadow: 0 0 5px 0 #575757;
+  -webkit-box-shadow: 0 0 5px 0 #575757;
   box-shadow: 0 0 5px 0 #575757;
   display: none;
   height: auto;
@@ -388,6 +387,7 @@ td {
 .content-wrapper {
   height: 100%;
   overflow: hidden;
+  margin: 0;
 }
 .content-wrapper h2,
 .content-wrapper h3 {
@@ -406,14 +406,7 @@ td {
 }
 
 .main-content {
-  margin: 0;
   padding: 22px 28px;
-}
-@media screen and (min-width: 960px) {
-  .main-content {
-    float: left;
-    max-width: 73.405%;
-  }
 }
 .main-content a {
   color: #575757;
@@ -616,12 +609,10 @@ td {
 
 @media screen and (min-width: 960px) {
   .sidebar {
-    -webkit-box-shadow: -1px 1px 10px #cccccc;
-    -moz-box-shadow: -1px 1px 10px #cccccc;
-    box-shadow: -1px 1px 10px #cccccc;
+    -moz-box-shadow: -1px 1px 10px #CCC;
+    -webkit-box-shadow: -1px 1px 10px #CCC;
+    box-shadow: -1px 1px 10px #CCC;
     border-radius: 0 0 0 5px;
-    float: right;
-    max-width: 26.277%;
   }
 }
 .sidebar h3 {
@@ -669,17 +660,17 @@ td {
   width: 100%;
 }
 .search-form .search-btn {
-  -webkit-background-clip: content-box;
-  -moz-background-clip: content-box;
+  -moz-background-clip: content;
+  -o-background-clip: content-box;
+  -webkit-background-clip: content;
   background-clip: content-box;
-  -webkit-background-origin: content;
   -moz-background-origin: content;
-  -ms-background-origin: content-box;
   -o-background-origin: content-box;
+  -webkit-background-origin: content;
   background-origin: content-box;
   border: 0;
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   cursor: pointer;
   height: 13px;
@@ -693,8 +684,8 @@ td {
 
 .footer {
   background: #005499;
-  -webkit-box-shadow: 0 0 9px 0 #575757;
   -moz-box-shadow: 0 0 9px 0 #575757;
+  -webkit-box-shadow: 0 0 9px 0 #575757;
   box-shadow: 0 0 9px 0 #575757;
   color: #fff;
   font-size: 1.1rem;

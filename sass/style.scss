@@ -32,11 +32,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 html {
-  background: $color-body-background;
   font-size: 62.5%;
 }
 
 body {
+  background: $color-body-background;
   color: #575757;
   font-family: $typeface-sans-serif;
   font-size: 1.6rem;
@@ -87,19 +87,17 @@ td {
   padding: 5px 9px;
 }
 
-// /* Start: page-wrapper */
-.page-wrapper {
+// /* Start: container */
+.container {
   background: #fff;
   @include box-shadow(0 0 10px #575757);
-  margin: 0 auto;
-  max-width: 1300px;
 
   @media screen and (min-width: 1347px) {
     padding: 10px 0;
   }
 }
 
-// /* End: page-wrapper */
+// /* End: container */
 
 @import 'modules/header';
 @import 'modules/header-nav';
@@ -108,6 +106,7 @@ td {
 .content-wrapper {
   height: 100%;
   overflow: hidden;
+  margin: 0;
 
   h2,
   h3 {
@@ -129,13 +128,7 @@ td {
 
 // /* Start: Left Panel */
 .main-content {
-  margin: 0;
   padding: 22px 28px;
-
-  @media screen and (min-width: 960px) {
-    float: left;
-    max-width: 73.405%;
-  }
 
   a {
     color: #575757;
@@ -377,8 +370,6 @@ td {
   @media screen and (min-width: 960px) {
     @include box-shadow(-1px 1px 10px #CCC);
     border-radius: 0 0 0 5px;
-    float: right;
-    max-width: 26.277%;
   }
 
   h3 {
