@@ -17,7 +17,6 @@
 
                 <footer class="post-footer">
                     <?php wp_link_pages(array('before' => '<div class="post-links-pages">Pages: ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
-                    <?php // get_template_part('template_parts/rrssb'); ?>
                     <?php get_template_part('template_parts/post_navigation'); ?>
                 </footer>
             </article>
