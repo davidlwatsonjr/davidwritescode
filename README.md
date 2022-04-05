@@ -1,1 +1,1 @@
-# The theme for davidlwatsonjr.com
+# The theme for davidwritescode.com
