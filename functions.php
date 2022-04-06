@@ -237,14 +237,6 @@ function dwc_echo_og_($property) {
     echo $dwc_og_tags[$property];
 }
 
-function dwc_echo_og_title() {
-    dwc_echo_og_('title');
-}
-
-function dwc_echo_og_url() {
-    dwc_echo_og_('url');
-}
-
 function dwc_random_message() {
     $messages = [
         'Nothing to see here.',
