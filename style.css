@@ -69,15 +69,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-.dwc-sprite, .dwc-search-btn, .search-form .search-btn {
-  background-image: url('/wp-content/themes/davidwritescode/images/search-btn.png');
-  background-repeat: no-repeat;
-}
-
-.dwc-search-btn, .search-form .search-btn {
-  background-position: 0 0;
-}
-
 *,
 *:before,
 *:after {
@@ -664,10 +655,13 @@ td {
   -o-background-clip: content-box;
   -webkit-background-clip: content;
   background-clip: content-box;
+  background-image: url('/wp-content/themes/davidwritescode/images/search-btn.png');
   -moz-background-origin: content;
   -o-background-origin: content-box;
   -webkit-background-origin: content;
   background-origin: content-box;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   border: 0;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
