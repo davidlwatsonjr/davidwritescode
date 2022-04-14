@@ -22,6 +22,12 @@ function dwc_setup() {
 }
 add_action( 'after_setup_theme', 'dwc_setup' );
 
+function dwc_query_params( $params ) {
+    $params[] = 'theme';
+    return $params;
+}
+add_filter( 'query_vars', 'dwc_query_params' );
+
 function dwc_widgets_init() {
     register_sidebar([
         'name' => __( 'Sidebar Widget Area', 'dwc' ),
@@ -109,6 +115,18 @@ function dwc_title() {
     if ( $paged >= 2 || $page >= 2 ) {
         echo ' | ' . sprintf( __( 'Page %s', 'dwc'), max( $paged, $page ) );
     }
+}
+
+function dwc_stylesheet_url()
+{
+    $stylesheet_url = get_bloginfo('stylesheet_url');
+    $theme = get_query_var('theme');
+
+    if (!empty($theme)) {
+        $stylesheet_url = str_replace('.css', '-' . $theme . '.css', $stylesheet_url);
+    }
+
+    return $stylesheet_url;
 }
 
 function dwc_echo_archive_page_title() {
