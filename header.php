@@ -8,8 +8,7 @@
 
         <?php get_template_part('template_parts/site_meta'); ?>
         <?php get_template_part('template_parts/favicon'); ?>
-
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+        <?php get_template_part('template_parts/styles'); ?>
 
         <link rel="alternate" type="application/rss+xml" title="Subscribe to <?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
         <link rel="alternate" type="application/atom+xml" title="Subscribe to <?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
