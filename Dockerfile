@@ -20,5 +20,9 @@ RUN curl https://downloads.wordpress.org/plugin/wordfence.7.11.3.zip -o /tmp/wor
     unzip /tmp/wordfence.zip -d /usr/src/wordpress/wp-content/plugins/ && \
     rm /tmp/wordfence.zip
 
+RUN curl https://downloads.wordpress.org/plugin/w3-total-cache.2.7.0.zip -o /tmp/w3-total-cache.zip && \
+    unzip /tmp/w3-total-cache.zip -d /usr/src/wordpress/wp-content/plugins/ && \
+    rm /tmp/w3-total-cache.zip
+
 COPY public/. /var/www/html/
 COPY src/. /var/www/html/wp-content/themes/davidwritescode/
