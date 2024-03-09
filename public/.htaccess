@@ -237,11 +237,6 @@ RewriteRule . /index.php [L]
     RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
     RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SLASH}%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
     RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SLASH}%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
-    RewriteCond %{REQUEST_METHOD} !=POST
-    RewriteCond %{ENV:W3TC_QUERY_STRING} =""
-    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
-    RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SLASH}%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.xml%{ENV:W3TC_ENC}" -f
-    RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SLASH}%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.xml%{ENV:W3TC_ENC}" [L]
 </IfModule>
 # END W3TC Page Cache core
 # BEGIN W3TC Browser Cache
@@ -392,6 +387,7 @@ RewriteRule . /index.php [L]
     <IfModule mod_headers.c>
         Header set Pragma "public"
         Header append Cache-Control "public"
+        Header unset Set-Cookie
     </IfModule>
 </FilesMatch>
 <FilesMatch "\.(html|htm|rtf|rtx|txt|xsd|xsl|xml|HTML|HTM|RTF|RTX|TXT|XSD|XSL|XML)$">
@@ -406,18 +402,11 @@ RewriteRule . /index.php [L]
     <IfModule mod_headers.c>
         Header set Pragma "public"
         Header append Cache-Control "public"
+        Header unset Set-Cookie
     </IfModule>
 </FilesMatch>
 <IfModule mod_headers.c>
     Header set Referrer-Policy "no-referrer-when-downgrade"
-</IfModule>
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} !([a-z0-9_\-]*sitemap[a-z0-9_\.\-]*\.(xml|xsl|html)(\.gz)?|robots\.txt)
-    RewriteCond %{REQUEST_URI} \.(css|htc|less|js|js2|js3|js4|html|htm|rtf|rtx|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|avif|avifs|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|webp|json|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|webm|mpp|otf|_otf|odb|odc|odf|odg|odp|ods|odt|ogg|ogv|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|_ttf|wav|wma|wri|woff|woff2|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
-    RewriteRule .* - [L]
 </IfModule>
 # END W3TC Browser Cache
 
