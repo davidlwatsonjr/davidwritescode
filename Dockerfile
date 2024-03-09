@@ -8,6 +8,10 @@ RUN curl https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.3.2.7.z
     unzip /tmp/plugin.zip -d /usr/src/wordpress/wp-content/plugins/ && \
     rm /tmp/plugin.zip
 
+RUN curl https://downloads.wordpress.org/plugin/cloudflare.4.12.6.zip -o /tmp/plugin.zip && \
+    unzip /tmp/plugin.zip -d /usr/src/wordpress/wp-content/plugins/ && \
+    rm /tmp/plugin.zip
+
 RUN curl https://downloads.wordpress.org/plugin/google-sitemap-generator.4.1.19.zip -o /tmp/plugin.zip && \
     unzip /tmp/plugin.zip -d /usr/src/wordpress/wp-content/plugins/ && \
     rm /tmp/plugin.zip
