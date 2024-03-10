@@ -5271,13 +5271,6 @@ td {
   padding: 0;
   width: 50px;
 }
-.header-nav .home a strong {
-  background: url('images/home-icon.png') no-repeat 50% 50%;
-  cursor: pointer;
-  display: block;
-  height: 36px;
-  text-indent: -20000px;
-}
 
 .content-wrapper {
   height: 100%;
