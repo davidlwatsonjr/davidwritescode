@@ -2,6 +2,9 @@ FROM wordpress:6
 
 RUN apt-get update && apt-get install -y unzip && apt-get clean
 
+RUN ln -s ../mods-available/ext_filter.load /etc/apache2/mods-enabled/ext_filter.load && \
+    ln -s ../mods-available/headers.load /etc/apache2/mods-enabled/headers.load
+
 USER www-data
 
 RUN sed -i "1 s/<?php/<?php\r\n\/** Enable W3 Total Cache *\/\r\ndefine\('WP_CACHE', true); \/\/ Added by W3 Total Cache\r\n/" /usr/src/wordpress/wp-config-docker.php
