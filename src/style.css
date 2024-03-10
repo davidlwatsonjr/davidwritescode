@@ -14,6 +14,7 @@ License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/* #region Bootstrap */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -4900,7 +4901,9 @@ button.close {
   }
 }
 /* end of bootstrap */
+/* #endregion */
 
+/* #region Another reset? */
 html,
 body,
 div,
@@ -5042,7 +5045,9 @@ td {
   border: 1px solid #dcdcdc;
   padding: 5px 9px;
 }
+/* #endregion */
 
+/* #region header */
 .header {
   -moz-box-shadow: 0 0 9px 0 #575757;
   background: #005499;
@@ -5212,7 +5217,9 @@ td {
     width: 33.712%;
   }
 }
+/* #endregion */
 
+/* #region header-nav */
 .header-nav ul {
   font-size: 1.4rem;
   height: 37px;
@@ -5265,7 +5272,9 @@ td {
   padding: 0;
   width: 50px;
 }
+/* #endregion */
 
+/* #region content-wrapper */
 .content-wrapper {
   height: 100%;
   margin: 0;
@@ -5281,6 +5290,7 @@ td {
   padding-bottom: 15px;
   text-transform: none;
 }
+/* #endregion */
 
 .page-content {
   margin: 0;
@@ -5742,6 +5752,7 @@ td {
   padding: 0 0 5px 10px;
 }
 
+/* #region LinkedIn badge*/
 /* LinkedIn badge */
 .artdeco-entity-image {
   -ms-flex-negative: 0;
@@ -5951,3 +5962,4 @@ html.edge .profile-badge__cta-btn:focus {
   color: #0a66c2;
   text-decoration: none !important;
 }
+/* #endregion */
