@@ -7,6 +7,10 @@ RUN ln -s ../mods-available/ext_filter.load /etc/apache2/mods-enabled/ext_filter
 
 USER www-data
 
+RUN rm -rf /usr/src/wordpress/wp-content/plugins/akismet \
+           /usr/src/wordpress/wp-content/plugins/hello.php \
+           /usr/src/wordpress/wp-content/themes/twenty*
+
 RUN sed -i "1 s/<?php/<?php\r\n\/** Enable W3 Total Cache *\/\r\ndefine\('WP_CACHE', true); \/\/ Added by W3 Total Cache\r\n/" /usr/src/wordpress/wp-config-docker.php
 
 COPY wp-content/. /usr/src/wordpress/wp-content/
