@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y unzip && apt-get clean
 
 USER www-data
 
-RUN sed -i "1 s/<?php/<?php\r\n\/** Enable W3 Total Cache *\/\r\ndefine\('WP_CACHE', true); \/\/ Added by W3 Total Cache\r\n/" wp-config.php
+RUN sed -i "1 s/<?php/<?php\r\n\/** Enable W3 Total Cache *\/\r\ndefine\('WP_CACHE', true); \/\/ Added by W3 Total Cache\r\n/" /usr/src/wordpress/wp-config-docker.php
 
 COPY wp-content/. /usr/src/wordpress/wp-content/
 
